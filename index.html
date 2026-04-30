@@ -29,6 +29,14 @@
     font-size: 17px;
   }
 
+  /* Bilder vor casual copy/download schützen */
+  img {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
   .serif {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 400;
@@ -386,6 +394,18 @@
     font-size: 1.1rem;
     margin-bottom: 14px;
     letter-spacing: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .module-num {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: var(--senfgelb);
+    line-height: 1;
+    flex-shrink: 0;
   }
   .module-lock {
     margin-left: 6px;
@@ -852,6 +872,8 @@
     .reasons-grid { grid-template-columns: 1fr; gap: 36px; }
     .testimonials { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-grid > div:first-child { order: 2; }
+    .about-grid .about-image { order: 1; }
     .who-columns { grid-template-columns: 1fr; gap: 40px; }
     .lead-short h2 { font-size: 2rem; }
     .kennst-headline { font-size: 2rem; margin-bottom: 40px; }
@@ -973,8 +995,8 @@
       <div class="lead-panel-text">
         <h3 class="lead-long-subhead">Capsule Wardrobe trifft Persönlichkeitsentwicklung</h3>
         <p>Genau das macht unseren Kleiderschrank zur Goldgrube für Persönlichkeitsentwicklung.</p>
-        <p>Wenn wir aufhören, uns für tausend verschiedene Rollen und Eventualitäten zu wappnen, können wir uns endlich eine viel wichtigere Frage beantworten: Wer will ich sein.</p>
-        <p>Und damit holen wir uns zurück, was wir unterwegs verloren haben: Träume, an die wir aufgehört hatten zu glauben. Selbstbewusstsein, das verschüttet war. Leichtigkeit, die uns irgendwann abhandengekommen ist.</p>
+        <p>Wenn wir aufhören, uns für tausend verschiedene Rollen und Eventualitäten zu wappnen, können wir uns endlich eine viel wichtigere Frage beantworten: <strong>Wer will ich sein.</strong></p>
+        <p>Und damit holen wir uns zurück, was wir unterwegs verloren haben: Träume, an die wir insgeheim nicht mehr geglaubt haben. Selbstbewusstsein, das verschüttet war. Leichtigkeit, die uns irgendwann abhandengekommen ist.</p>
       </div>
       <div class="lead-panel-image">
         <img src="images/IMG_0185.JPG" alt="Adina vor der Kleiderstange im Sonnenlicht, ruhige Rückansicht">
@@ -985,8 +1007,8 @@
     <div class="lead-panel">
       <div class="lead-panel-text">
         <h3 class="lead-long-subhead">Neustart für deinen Alltag</h3>
-        <p><em>The Miracle Wardrobe</em> ist ein pragmatisches Programm, in dem du mit Struktur und System deine Capsule Wardrobe umsetzt und dich dabei auf eine befreiende Reise hin zu dir selbst begibst.</p>
-        <p>Eine Erlaubnis, loszulassen. Und deine Energie zu bündeln für das, was dir wirklich wichtig ist.</p>
+        <p><em>The Miracle Wardrobe</em> ist ein pragmatisches und feinfühliges Programm, in dem du mit Struktur und System deine Capsule Wardrobe umsetzt und dich dabei auf eine befreiende Reise hin zu dir selbst begibst.</p>
+        <p>Eine Erlaubnis, loszulassen und deine Energie zu bündeln für das, was dir wirklich wichtig ist.</p>
       </div>
       <div class="lead-panel-image">
         <img src="images/IMG_0184.JPG" alt="Adina mit Bügel an der Kleiderstange, leichter Blick zur Seite">
@@ -1016,7 +1038,7 @@
         <div class="module-image">
           <img src="images/modul-1.JPG" alt="Modul 1: Kleidung als Spiegel">
         </div>
-        <h3 class="module-title">1. Kleidung als Spiegel <span class="module-lock">🔒</span></h3>
+        <h3 class="module-title"><span class="module-num">01</span><span>Kleidung als Spiegel <span class="module-lock">🔒</span></span></h3>
         <p class="module-text">Du erkennst, warum dich dein Kleiderschrank frustriert oder überfordert – nicht wegen „zu wenig Ordnung", sondern wegen der Geschichten, Erwartungen und Rollen, die darin hängen. Du entdeckst auf liebevolle Weise Muster, Ursachen und blinde Flecken und siehst deinen Kleiderschrank – und dich selbst – in einem neuen Licht. Ohne den Druck von „jetzt muss alles raus" entsteht Erleichterung und Klarheit. Du spürst, wohin die Reise geht.</p>
       </article>
 
@@ -1024,15 +1046,15 @@
         <div class="module-image">
           <img src="images/modul-2.JPG" alt="Modul 2: Selbstbild & Stilfindung">
         </div>
-        <h3 class="module-title">2. Selbstbild & Stilfindung <span class="module-lock">🔒</span></h3>
-        <p class="module-text">Du findest mit spielerischen Übungen und Anleitungen heraus, welche Kleidung, Farben und Formen wirklich zu dir passen – zu deinem Leben, deinem Körper, deiner Energie. Du entwickelst deinen Style-Guide, der sich stimmig und authentisch anfühlt. Dinge, die dich früher verwirrt oder in Versuchung gebracht haben – riesige Auswahl, Trends, Vergleiche – verlieren an Reiz. Plötzlich fällt es dir leicht zu erkennen, was zu dir gehört und was nicht. Es entsteht ein roter Faden – und mit ihm ein neues Gefühl von Sicherheit: Das bin <em>ich</em>.</p>
+        <h3 class="module-title"><span class="module-num">02</span><span>Selbstbild & Stilfindung <span class="module-lock">🔒</span></span></h3>
+        <p class="module-text">Du findest mit spielerischen Übungen und Anleitungen heraus, welche Kleidung, Farben und Formen wirklich zu dir passen – zu deinem Leben, deinem Körper, deiner Energie. Du entwickelst deinen Style-Guide, der sich stimmig und authentisch anfühlt. Dinge, die dich früher verwirrt oder in Versuchung gebracht haben – riesige Auswahl, Trends, Vergleiche – verlieren an Reiz. Plötzlich fällt es dir leicht zu erkennen, was zu dir gehört und was nicht. Es entsteht ein roter Faden – und mit ihm ein neues Gefühl von Sicherheit:<br>Das bin <em>ich</em>.</p>
       </article>
 
       <article class="module">
         <div class="module-image">
           <img src="images/modul-3.JPG" alt="Modul 3: Miracle Wardrobe">
         </div>
-        <h3 class="module-title">3. Miracle Wardrobe <span class="module-lock">🔒</span></h3>
+        <h3 class="module-title"><span class="module-num">03</span><span>Miracle Wardrobe <span class="module-lock">🔒</span></span></h3>
         <p class="module-text">In diesem Modul planst du mithilfe strukturierter Übungen und Anleitungen deine eigene Miracle Wardrobe – eine von der Socke bis zum Mantel durchdachte Garderobe, die harmonisch, zeitlos und vielseitig kombinierbar ist. Zum ersten Mal bekommt dein Kleiderschrank ein System: Du weißt genau, was du in welcher Ausführung brauchst. Überforderung und Unsicherheit beim Anziehen oder Shoppen gehören damit der Vergangenheit an. Deine Miracle Wardrobe macht es dir leicht, dich in jeder Saison und Lebenslage wohl und schön zu fühlen – denn sie spiegelt dich und deine Einzigartigkeit wider.</p>
       </article>
 
@@ -1040,7 +1062,7 @@
         <div class="module-image">
           <img src="images/modul-4.JPG" alt="Modul 4: Sicher entscheiden">
         </div>
-        <h3 class="module-title">4. Sicher entscheiden <span class="module-lock">🔒</span></h3>
+        <h3 class="module-title"><span class="module-num">04</span><span>Sicher entscheiden <span class="module-lock">🔒</span></span></h3>
         <p class="module-text">Du lernst, wie du klare Entscheidungen über deine Kleidung triffst – ohne Angst, ohne schlechtes Gewissen und ohne das Gefühl, etwas falsch zu machen. Du weißt jetzt, welche Teile wirklich in dein Leben passen, was bleiben darf und was du loslassen kannst. Einfache, verlässliche Entscheidungshilfen nehmen dir die Unsicherheit: Woran erkenne ich, was bleiben darf? Was ist ein klassisches „Eigentlich"-Teil? Wo überlagert Gewohnheit, Nostalgie oder schlechtes Gewissen meine Entscheidung? Wie treffe ich Entscheidungen, die ich später nicht bereue? Loslassen verliert seinen Druck. Entscheidungen werden klar, leicht und befreiend.</p>
       </article>
 
@@ -1048,7 +1070,7 @@
         <div class="module-image">
           <img src="images/modul-5.JPG" alt="Modul 5: Kleiderschrank-Reset">
         </div>
-        <h3 class="module-title">5. Kleiderschrank-Reset <span class="module-lock">🔒</span></h3>
+        <h3 class="module-title"><span class="module-num">05</span><span>Kleiderschrank-Reset <span class="module-lock">🔒</span></span></h3>
         <p class="module-text">Du bist jetzt soweit, deine Miracle Wardrobe in die Realität umzusetzen. Du lernst, wie ein Kleiderschrank-Reset gelingt, ohne in Chaos oder Überforderung zu enden – klar, strukturiert und in deinem Tempo. Du bekommst Werkzeuge und Optionen an die Hand, um behutsam und liebevoll mit möglichen Herausforderungen, Versuchungen, Abschieden und Zweifeln umzugehen. Schritt für Schritt erweckst du deine Lieblingsteile-Garderobe zum Leben. Am Ende dieses Moduls hast du deine eigene Miracle Wardrobe – klar, organisiert und bereit, dich in ein neues Lebensgefühl zu begleiten.</p>
       </article>
 
@@ -1056,7 +1078,7 @@
         <div class="module-image">
           <img src="images/modul-6.JPG" alt="Modul 6: Zukunftssicherheit">
         </div>
-        <h3 class="module-title">6. Zukunftssicherheit <span class="module-lock">🔒</span></h3>
+        <h3 class="module-title"><span class="module-num">06</span><span>Zukunftssicherheit <span class="module-lock">🔒</span></span></h3>
         <p class="module-text">Du lernst, wie du deine Miracle Wardrobe im Alltag lebendig hältst. Du erkennst mühelos, welche neuen Teile deine Garderobe ergänzen statt verkomplizieren, woran du lange Freude haben wirst und wie du Fehlkäufe vermeidest. Shoppen wird zu einer bewussten Entscheidung – nicht zu einem Impuls oder einer Kompensation. Du entwickelst einfache Routinen, die Ordnung erhalten, ohne Aufwand zu erzeugen. Dieses Modul schenkt dir Sicherheit für die Zukunft: Dein Kleiderschrank bleibt klar, übersichtlich und stimmig – auch dann, wenn sich dein Leben oder dein Alltag verändert.</p>
       </article>
     </div>
@@ -1167,7 +1189,7 @@
 <!-- ═══════════════════════════════════════════════
      SEKTION 09 — FAQ
      ═══════════════════════════════════════════════ -->
-<section class="faq bg-beige" id="s09">
+<section class="faq bg-creme" id="s09">
   <div class="container">
     <h2>Fragen zum Kurs</h2>
     <div class="faq-list">
@@ -1217,11 +1239,11 @@
     <div class="about-grid">
       <div>
         <h2>Hi, ich bin Adina.</h2>
-        <p>Viele kennen mich als die „Minimalismuse" (kurz für Minimalismus-Muse) über Instagram, mein Buch „Erfüllter Leben mit Minimalismus" oder aus der Zeitung (ZEIT, Women's Health, uvm.).</p>
-        <p>Seit Jahren teile ich Inspiration zum Thema „leichter Leben" und Minimalismus (auf entspannt) im Internet. Was viele nicht wissen – meine Minimalismus-Reise begann damals vor 8 Jahren, nichtsahnend vor meinem Kleiderschrank. Als ich damals anfing, mich tiefer mit meinem Kleiderschrank zu befassen, spiegelten mir meine damaligen Kleidungsstücke so viel mehr als Farben, Formen und Materialien: Ich erkannte darin Verhaltensmuster, die weit über meinen Kleiderschrank hinaus wirkten, genauso wie insgeheime Ängste, Sehnsüchte und verschiedene Rollen, die ich vergeblich versuchte in meiner Garderobe (und in mir) zu vereinbaren.</p>
-        <p>Rückblickend fühlt sich dieser Moment an, wie ein Neuanfang, der sich, nachdem ich mit meiner Garderobe fertig war, durch alle Lebensbereiche hindurchzog. Deshalb war für mich immer klar – mein erster Online-Kurs wird sich dem Kleiderschrank widmen. Denn die Beschäftigung mit der eigenen Garderobe ist, wenn man es richtig macht, eine tiefgründige, überraschende und befreiende Reise hin zu sich selbst – nur so entsteht eine Miracle Wardrobe, die wirklich hält, was sie verspricht. Sie schenkt uns einen Neuanfang, der uns wieder Zeit und Raum für die wirklich wichtigen Dinge im Leben gibt.</p>
+        <p>Viele kennen mich als die „Minimalismuse" (kurz für Minimalismus Muse) über Instagram, mein Buch „Erfüllter Leben mit Minimalismus" oder aus der Zeitung (ZEIT, Women's Health, uvm.).</p>
+        <p>Seit 5 Jahren teile ich Inspiration rund ums Thema „leichter Leben" und Minimalismus (auf entspannt) im Internet. Was viele nicht wissen – meine Minimalismus-Reise begann damals vor 8 Jahren, nichtsahnend vor meinem Kleiderschrank. Als ich damals anfing, mich tiefer mit meinem Kleiderschrank zu befassen, spiegelten mir meine damaligen Kleidungsstücke so viel mehr als Farben, Formen und Materialien: Ich erkannte darin Verhaltensmuster, die weit über meinen Kleiderschrank hinaus wirkten, genauso wie insgeheime Ängste, Sehnsüchte und verschiedene Rollen, die ich vergeblich versuchte in meiner Garderobe (und in mir) zu vereinbaren.</p>
+        <p>Rückblickend fühlt sich dieser Moment wie ein Neuanfang an, der sich – nachdem ich mit meiner Garderobe fertig war – auf alle Lebensbereiche positiv auswirkte. Deshalb war für mich immer klar – mein erster Online-Kurs wird sich dem Kleiderschrank widmen. Denn die Beschäftigung mit der eigenen Garderobe ist, wenn man es richtig macht, eine tiefgründige, überraschende und befreiende Reise hin zu sich selbst – nur so entsteht eine Miracle Wardrobe, die wirklich hält, was sie verspricht. Sie schenkt uns einen Neuanfang, der uns wieder mit unserer wahren Natur verbindet und uns wieder Zeit und Raum für die wirklich wichtigen Dinge im Leben gibt.</p>
         <p>The Miracle Wardrobe ist der Kurs, den ich mir damals selbst gewünscht hätte.</p>
-        <p>Ich freu mich drauf, dich im Kurs kennenzulernen, und bei dieser besonderen Reise zu begleiten.</p>
+        <p>Ich freu mich drauf, dich im Kurs kennenzulernen und bei dieser besonderen Reise zu begleiten.</p>
         <p>Deine Adina</p>
       </div>
       <div class="about-image">
@@ -1241,8 +1263,8 @@
       <strong>14 Tage</strong>
       <span>Garantie</span>
     </div>
-    <h2>Wenn du nach zwei Wochen das Gefühl hast, dieser Kurs ist nichts für dich, bekommst du dein Geld zurück.</h2>
-    <p>Ganz ohne Begründung, ohne Diskussion, ohne Haken. Ich will nicht, dass jemand Geld für etwas ausgibt, das sich nicht richtig anfühlt.</p>
+    <h2>Ohne Risiko</h2>
+    <p>Wenn du nach zwei Wochen das Gefühl hast, dieser Kurs ist nichts für dich, bekommst du dein Geld zurück. Ganz ohne Begründung, ohne Diskussion, ohne Haken. Ich will nicht, dass jemand Geld für etwas ausgibt, das sich nicht richtig anfühlt.</p>
     <p>Schau dir also alles in Ruhe an und entscheide dann, ob du dabei bleiben möchtest, oder nicht.</p>
   </div>
 </section>
@@ -1291,7 +1313,7 @@
   </div>
   <div class="full-stop-content">
     <h2>Bist du bereit, dir eine Garderobe aufzubauen, die sich ganz nach dir anfühlt?</h2>
-    <p>Nutze diese Reise, um wieder Überblick zu bekommen, was dir wirklich wichtig ist, was wirklich deins ist, was du wirklich möchtest. Im Kleiderschrank. Und darüber hinaus.</p>
+    <p>Nutze diese Reise für dich – mehr Leichtigkeit, Klarheit und Vorfreude in dir, im Kleiderschrank und darüber hinaus.</p>
 
     <div class="checkout-embed">
       <div class="tc-v2-embeddable-target" data-thrivecart-account="minimalismuse" data-thrivecart-tpl="v2" data-thrivecart-product="2" data-thrivecart-embeddable="tc-minimalismuse-2-G0WJB6"></div>
